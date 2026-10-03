@@ -1,0 +1,3 @@
+import source from './bosPresetSource.json';
+import type { BosCatalogItem } from '../types/domain';
+export const mockPresetCatalogItems:BosCatalogItem[]=source.master_items.map(row=>({id:row.identity,name:row.catalog_name,categoryId:row.category_id as BosCatalogItem['categoryId'],kind:row.kind as BosCatalogItem['kind'],defaultUnit:row.default_unit as BosCatalogItem['defaultUnit'],allowedUnits:[row.default_unit as BosCatalogItem['defaultUnit']],active:true,familyName:row.family_name,specification:row.specification,categoryLabel:row.category_label,sourceDescription:row.source_description,sourceKey:row.source_key,searchAliases:row.search_aliases,fixedWireMm2:row.fixed_wire_mm2,brandHint:row.brand_hint,unitReviewNote:row.unit_review_note}));
